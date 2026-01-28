@@ -99,10 +99,10 @@
                  <div class="w-5 h-5 bg-slate-900 rounded-full flex items-center justify-center text-white">
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
                  </div>
-                 <span class="font-bold tracking-tight">rauantodev</span>
+                 <span class="font-bold tracking-tight">Rhys Milnes</span>
             </div>
             <div class="text-slate-500">
-                Copyright © 2025 rauantodev
+                Copyright © 2025 Rhys Milnes. All rights reserved.
             </div>
         </div>
     </footer>
@@ -112,7 +112,7 @@
 
 
 <style scoped>
-/* Estilos adicionales si fueran necesarios */
+
 .perspective-1000 {
   perspective: 1000px;
 }

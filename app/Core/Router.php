@@ -26,6 +26,16 @@ require BASE_PATH . '/app/Controllers/HomeController.php';
 (new HomeController())->index();
 break;
 
+case '/login':
+require BASE_PATH . '/app/Controllers/LoginController.php';
+(new LoginController())->index();
+break;
+
+case '/about':
+require BASE_PATH . '/app/Controllers/AboutController.php';
+(new AboutController())->index();
+break;
+
 case '/contact':
 require BASE_PATH . '/app/Controllers/ContactController.php';
 (new ContactController())->index();
