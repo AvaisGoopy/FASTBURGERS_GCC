@@ -1,17 +1,21 @@
 <?php
 // This controller handles the home page (/)
-
 class HomeController
-{
-public function index(): void
-{
-// Page title used by the layout
-$title = 'Fast Burgers - Home';
+    {
+        public function index(): void
+        {
+            $conn = require BASE_PATH . '/config/database.php';
+            
 
-// Tell the layout which view to display
-$view = BASE_PATH . '/app/Views/home.php';
+            // Page title used by the layout
+            $title = 'Fast Burgers - Home';
 
-// Load the layout (which will load the view)
-require BASE_PATH . '/app/Views/layout.php';
-}
-}
+            // Tell the layout which view to display
+            $view = BASE_PATH . '/app/Views/home.php';
+
+            // Load the layout (which will load the view)
+            require BASE_PATH . '/app/Views/layout.php';
+        }
+    }
+
+    
