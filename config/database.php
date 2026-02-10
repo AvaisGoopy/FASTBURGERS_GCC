@@ -17,7 +17,6 @@ $conn = new mysqli($host, $username, $password, $database);
 if ($conn->connect_error) {
     die('Database connection failed: ' . $conn->connect_error);
 }
-else echo('connection successful');
 
 /**
  * Set the character set (important for security and emojis)

@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <!-- Links Grid -->
+        <!-- Links Grid replaced by 4 main toggle buttons with subclass links -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-slate-100 pb-16 mb-12">
             <!-- Tagline Column -->
             <div class="lg:col-span-4">
@@ -47,43 +47,46 @@
                     Designed for those who build the future quietly.
                  </p>
             </div>
-            
-            <!-- Navigation Columns -->
-            <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Column 1 -->
-                <div class="flex flex-col gap-4">
-                    <h4 class="font-medium text-slate-900">Platform</h4>
-                    <ul class="space-y-3 text-slate-500 text-sm">
+
+            <!-- Four grouped buttons -->
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Button Group 1 -->
+                <div class="bg-white/5 p-4 rounded-lg">
+                    <button class="w-full text-left font-medium text-slate-900 py-3 px-4 rounded-md hover:bg-white/3 transition" data-toggle="group" data-target="platform">Platform</button>
+                    <ul id="platform" class="mt-3 space-y-2 text-slate-500 text-sm hidden pl-4">
                         <li><a href="#" class="hover:text-slate-900 transition-colors">How It Works</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Features</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Integrations</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Roadmap</a></li>
                     </ul>
                 </div>
-                <!-- Column 2 -->
-                <div class="flex flex-col gap-4">
-                    <h4 class="font-medium text-slate-900">Company</h4>
-                    <ul class="space-y-3 text-slate-500 text-sm">
-                         <li><a href="#" class="hover:text-slate-900 transition-colors">About</a></li>
+
+                <!-- Button Group 2 -->
+                <div class="bg-white/5 p-4 rounded-lg">
+                    <button class="w-full text-left font-medium text-slate-900 py-3 px-4 rounded-md hover:bg-white/3 transition" data-toggle="group" data-target="company">Company</button>
+                    <ul id="company" class="mt-3 space-y-2 text-slate-500 text-sm hidden pl-4">
+                        <li><a href="#" class="hover:text-slate-900 transition-colors">About</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Careers</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Culture</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Press Kit</a></li>
                     </ul>
                 </div>
-                 <!-- Column 3 -->
-                <div class="flex flex-col gap-4">
-                    <h4 class="font-medium text-slate-900">Resources</h4>
-                     <ul class="space-y-3 text-slate-500 text-sm">
+
+                <!-- Button Group 3 -->
+                <div class="bg-white/5 p-4 rounded-lg">
+                    <button class="w-full text-left font-medium text-slate-900 py-3 px-4 rounded-md hover:bg-white/3 transition" data-toggle="group" data-target="resources">Resources</button>
+                    <ul id="resources" class="mt-3 space-y-2 text-slate-500 text-sm hidden pl-4">
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Blog</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Docs</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Support</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">API Reference</a></li>
                     </ul>
                 </div>
-                 <!-- Column 4 -->
-                <div class="flex flex-col gap-4">
-                    <h4 class="font-medium text-slate-900">Legal</h4>
-                     <ul class="space-y-3 text-slate-500 text-sm">
+
+                <!-- Button Group 4 -->
+                <div class="bg-white/5 p-4 rounded-lg">
+                    <button class="w-full text-left font-medium text-slate-900 py-3 px-4 rounded-md hover:bg-white/3 transition" data-toggle="group" data-target="legal">Legal</button>
+                    <ul id="legal" class="mt-3 space-y-2 text-slate-500 text-sm hidden pl-4">
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Privacy Policy</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Terms of Use</a></li>
                         <li><a href="#" class="hover:text-slate-900 transition-colors">Security</a></li>
@@ -108,6 +111,24 @@
     </footer>
 
   </div>
+    <script>
+        (function(){
+            document.querySelectorAll('[data-toggle="group"]').forEach(function(btn){
+                btn.addEventListener('click', function(){
+                    var target = this.getAttribute('data-target');
+                    // toggle this target
+                    var el = document.getElementById(target);
+                    if(!el) return;
+                    var isHidden = el.classList.contains('hidden');
+                    // hide all groups
+                    document.querySelectorAll('[id^="platform"],[id^="company"],[id^="resources"],[id^="legal"]').forEach(function(g){
+                        g.classList.add('hidden');
+                    });
+                    if(isHidden) el.classList.remove('hidden');
+                });
+            });
+        })();
+    </script>
 </template>
 
 

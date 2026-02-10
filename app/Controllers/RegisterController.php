@@ -11,6 +11,6 @@ class RegisterController
         $view = BASE_PATH . '/app/Views/register.php';
 
         // Load the layout (which will load the view)
-        require BASE_PATH . '/app/Views/register.php';
+        require BASE_PATH . '/app/Views/layout.php';
     }
 }

@@ -1,0 +1,59 @@
+/* Fluid site styles and navbar sticky enhancements */
+:root{
+  --nav-blur: 6px;
+}
+/* Ensure the site container is fluid but constrained for readability */
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container-fluid{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding-left:1rem;
+  padding-right:1rem;
+}
+
+/* Navbar specific */
+.site-nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: box-shadow 200ms ease, background-color 200ms ease, backdrop-filter 200ms ease;
+}
+.site-nav.scrolled{
+  box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+  backdrop-filter: blur(var(--nav-blur));
+}
+
+/* Logo scaling - keep it responsive and never overflow */
+.site-logo{
+  max-height: 9rem;
+  height: auto;
+  width: auto;
+  display: block;
+}
+
+/* Small-screen tweaks to keep nav compact */
+@media (max-width: 640px){
+  .site-logo{ max-height: 4.5rem; }
+  .site-nav{ padding-top:0.35rem; padding-bottom:0.35rem; }
+}
+
+/* Minor utility for footer button groups to better match rest of UI */
+.footer-group button{
+  background: transparent;
+  border: none;
+  width:100%;
+  text-align:left;
+}
+
+/* accessibility: focus outlines */
+button:focus, a:focus{
+  outline: 3px solid rgba(99,102,241,0.25);
+  outline-offset: 2px;
+}

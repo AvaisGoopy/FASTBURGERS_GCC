@@ -41,6 +41,11 @@ require BASE_PATH . '/app/Controllers/ContactController.php';
 (new ContactController())->index();
 break;
 
+case '/register':
+require BASE_PATH . '/app/Controllers/RegisterController.php';
+(new RegisterController())->index();
+break;
+
 case '/admin/users':
 require BASE_PATH . '/app/Controllers/Admin/UsersController.php';
 (new UsersController())->index();
