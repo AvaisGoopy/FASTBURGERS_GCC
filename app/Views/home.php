@@ -8,14 +8,10 @@ $title = 'Home - Fast Burgers';
     <div class="container-fluid">
         <div class="hero-inner">
             <div class="hero-content">
-                <h1 style="color: white; font-size: 2.25rem; margin-bottom: 1.5rem; line-height: 1.2;">Delicious Burgers<br />Delivered Fast</h1>
-                <p style="color: rgba(255,255,255,0.95); font-size: 1.125rem; margin-bottom: 2rem;">
+                <h1 style="color: #ea580c; font-size: 2.25rem; margin-bottom: 1.5rem; line-height: 1.2; text-align: center;">Delicious Burgers<br />Delivered Fast</h1>
+                <p style="color: rgba(255,255,255,0.95); font-size: 1.125rem; margin-bottom: 2rem; text-align: center;">
                     Order from our wide selection of gourmet burgers, sides, and drinks. Fast delivery to your door!
                 </p>
-                <div class="hero-cta">
-                    <button class="btn btn-secondary px-8 py-3 font-semibold text-lg" style="background-color: #fcd34d; color: #1f2937;">Order Now</button>
-                    <button class="btn btn-ghost text-white border-white hover:bg-white/10 px-8 py-3 font-semibold text-lg">View Menu</button>
-                </div>
             </div>
         </div>
     </div>

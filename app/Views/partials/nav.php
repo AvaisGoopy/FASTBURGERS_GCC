@@ -1,19 +1,20 @@
-<div class="top-bar">
-  <div class="container-fluid">
+<div class="top-bar" style="position: relative; height: auto;">
+  <div class="container-fluid" style="position: relative; padding-top: 90px; padding-bottom: 20px;">
+    <a href="/" class="flex items-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <img src="/assets/images/FBP_logo.png" alt="Fast Burgers" title="Fast Burgers" class="site-logo" style="height: 168px; width: auto;">
+    </a>
     <div class="flex justify-between items-center">
-      <a href="/" class="flex items-center">
-        <img src="/assets/images/FBP_logo.png" alt="Fast Burgers" title="Fast Burgers" class="site-logo h-14 w-auto">
-      </a>
-      <div class="text-white font-semibold text-sm md:text-base">Fast, fresh & hot — order online</div>
+      <div style="width: 180px;"></div>
+      <div class="text-white font-semibold" style="position: absolute; right: 50px; font-size: 1.25rem;">Fast, fresh & hot — order online</div>
     </div>
   </div>
 </div>
 
-<nav class="site-nav">
+<nav class="site-nav" style="background-color: #ea580c !important;">
     <div class="container-fluid">
         <div class="flex justify-between items-center">
             <!-- Desktop Navigation -->
-            <ul class="hidden md:flex gap-2 items-center list-none">
+            <ul class="hidden md:flex gap-2 items-center list-none" style="margin-left: 50px;">
                 <li><a href="/" class="site-nav a active">Home</a></li>
                 <li class="relative group">
                     <button type="button" class="site-nav a" data-toggle="nav" data-target="nav-orders">Orders <span class="ml-1">▾</span></button>

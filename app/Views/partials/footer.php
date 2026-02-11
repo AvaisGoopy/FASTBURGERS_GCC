@@ -1,4 +1,4 @@
-<footer>
+<footer style="background-color: #ea580c; color: #fff;">
     <div class="container-fluid py-12">
         <!-- Footer Content Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">

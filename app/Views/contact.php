@@ -3,7 +3,7 @@ $title = 'Contact Us - Fast Burgers';
 ?>
 
 <!-- Hero Section -->
-<section class="hero-section" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 3rem 0;">
+<section class="hero-section" style="background: linear-gradient(135deg, #ea580c 0%, #fb923c 100%); color: white; padding: 3rem 0%;">
     <div class="container-fluid text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-4" style="color: white;">Get In Touch</h1>
         <p class="text-lg text-white/80 max-w-2xl mx-auto" style="color: rgba(255, 255, 255, 0.9);">We'd love to hear from you. Send us a message!</p>

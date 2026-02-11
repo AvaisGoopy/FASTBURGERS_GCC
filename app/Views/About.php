@@ -5,7 +5,7 @@ $title = 'About Us - Fast Burgers';
 <!-- Hero Section -->
 <section class="hero-section" style="padding: 3rem 0;">
     <div class="container-fluid" style="text-align: center;">
-        <h1 style="color: white; font-size: 2rem; margin-bottom: 1rem;">About Fast Burgers</h1>
+        <h1 style="color: #ea580c; font-size: 2rem; margin-bottom: 1rem;">About Fast Burgers</h1>
         <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.125rem;">Crafting delicious moments since 2020</p>
     </div>
 </section>
@@ -15,7 +15,7 @@ $title = 'About Us - Fast Burgers';
     <div class="container-fluid">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
             <div>
-                <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #111827;">Our Story</h2>
+                <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: #ea580c;">Our Story</h2>
                 <p style="color: #6b7280; margin-bottom: 1rem; line-height: 1.6;">
                     Fast Burgers was founded on a simple belief: quality food doesn't have to take time. We started as a small burger stand and grew into a beloved local favorite.
                 </p>
@@ -32,7 +32,7 @@ $title = 'About Us - Fast Burgers';
         </div>
 
         <!-- Values Section -->
-        <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #111827;">Our Core Values</h2>
+        <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #ea580c;">Our Core Values</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
             <div class="card" style="padding: 2rem; background-color: white; border: 1px solid rgba(234, 88, 12, 0.12); border-radius: 0.5rem;">
                 <div style="font-size: 2rem; margin-bottom: 1rem;">✨</div>

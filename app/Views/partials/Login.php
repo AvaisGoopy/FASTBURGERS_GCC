@@ -5,7 +5,7 @@ $title = 'Login - Fast Burgers';
 <section class="py-16 md:py-24 bg-indigo-50">
     <div class="max-w-md mx-auto">
         <div class="card">
-            <h1 class="text-3xl font-bold text-center mb-8 text-indigo-900">Welcome Back</h1>
+            <h1 class="text-3xl font-bold text-center mb-8" style="color: #ea580c;">Welcome Back</h1>
             
             <form action="#" method="POST" class="flex flex-col gap-4">
                 <div>
