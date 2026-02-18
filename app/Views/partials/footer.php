@@ -24,7 +24,7 @@
             <div>
                 <h4 class="text-white font-bold text-lg mb-4">Contact</h4>
                 <ul class="space-y-2">
-                    <li class="text-white/90 text-sm">Phone: (555) 123-4567</li>
+                    <li class="text-white/90 text-sm">Phone: +44 20 7946 0958</li>
                     <li class="text-white/90 text-sm">Email: <a href="mailto:info@fastburgers.com" class="hover:text-white transition-colors">info@fastburgers.com</a></li>
                 </ul>
             </div>

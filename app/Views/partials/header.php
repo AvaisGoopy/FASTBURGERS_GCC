@@ -22,7 +22,7 @@
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="<?= BASE_PATH?>/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 <style>
   /* Override Tailwind defaults with our brand colors */
   :root {

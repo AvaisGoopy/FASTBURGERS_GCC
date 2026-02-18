@@ -23,7 +23,7 @@ $title = 'Contact Us - Fast Burgers';
             <div class="card text-center">
                 <div class="text-4xl mb-4">📞</div>
                 <h3 class="text-xl font-semibold mb-2">Phone</h3>
-                <p class="text-slate-600">(555) 123-4567<br>10 AM - 11 PM Daily</p>
+                <p class="text-slate-600">+44 20 7946 0958<br>10 AM - 11 PM Daily</p>
             </div>
             <div class="card text-center">
                 <div class="text-4xl mb-4">✉️</div>

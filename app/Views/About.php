@@ -5,8 +5,8 @@ $title = 'About Us - Fast Burgers';
 <!-- Hero Section -->
 <section class="hero-section" style="padding: 3rem 0;">
     <div class="container-fluid" style="text-align: center;">
-        <h1 style="color: #ea580c; font-size: 2rem; margin-bottom: 1rem;">About Fast Burgers</h1>
-        <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.125rem;">Crafting delicious moments since 2020</p>
+        <h1 style="font-size: 2rem; margin-bottom: 1rem;">About Fast Burgers</h1>
+        <p style="font-size: 1.125rem;">Crafting delicious moments since 2020</p>
     </div>
 </section>
 
