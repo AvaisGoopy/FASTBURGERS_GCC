@@ -20,6 +20,7 @@ class RegisterController
     }
 }
 
+?php> 
 
 do an echo "line 45" (example) to find where code stops running in RegisterController.php
 
