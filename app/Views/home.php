@@ -66,7 +66,7 @@ $title = 'Home - Fast Burgers';
                 </div>
                 <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <h3 style="font-size: 1.125rem; font-weight: 600; color: #111827;">Classic Cheeseburger</h3>
+                        <h3 style="font-size: 1.125rem; font-weight: 600; color: #111827;">Classic Beefburger</h3>
                         <span style="font-size: 0.875rem; font-weight: 600; color: #ea580c;">⭐ 4.8</span>
                     </div>
                     <p style="color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem; flex: 1;">Our signature beef patty with lettuce, tomato, and special sauce on a toasted bun</p>
