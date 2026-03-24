@@ -1,6 +1,6 @@
 <?php
 
-class LoginController
+class AdminLoginController
 {
     public function index(): void
     {
@@ -42,9 +42,9 @@ class LoginController
             }
 
             if (empty($errors)) {
-                $sql = "SELECT customer_id, first_name, last_name, email, password  
-                        FROM customers
-                        WHERE email = ?
+                $sql = "SELECT email, password, admin
+                        FROM staff
+                        WHERE email = ? AND admin = 1
                         LIMIT 1";
 
                 $stmt = $conn->prepare($sql);
@@ -79,7 +79,7 @@ class LoginController
                             'logged_in' => true,
                             'token' => $authToken,
                             'token_issued_at' => time(),
-                            'is_admin' => 0
+                            'is_admin' => 1
 
                         ];
 
@@ -93,7 +93,7 @@ class LoginController
                         ];
 
                         // Redirect after login
-                        header('Location: customer-dashboard');
+                        header('Location: admin-dashboard');
                         exit;
                     }
                 }
@@ -101,7 +101,7 @@ class LoginController
         }
 
         // Render view
-        $view = BASE_PATH . '/app/Views/login.php';
+        $view = BASE_PATH . '/app/Views/admin/login.php';
         require BASE_PATH . '/app/Views/layout.php';
     }
 }

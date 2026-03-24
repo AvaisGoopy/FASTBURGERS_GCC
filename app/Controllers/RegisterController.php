@@ -7,10 +7,8 @@ class RegisterController
         $title = 'Fast Burgers - Register';
         $errors = [];
 
-        // Load DB connection: must define $conn = new mysqli(...)
         require BASE_PATH . '/config/database.php';
 
-        // Basic safety check
         if (!isset($conn) || !($conn instanceof mysqli)) {
             die("Database connection not available.");
         }
@@ -20,13 +18,13 @@ class RegisterController
             $first_name = trim($_POST['first_name'] ?? '');
             $last_name  = trim($_POST['last_name'] ?? '');
             $email      = trim($_POST['email'] ?? '');
-            $password   = $_POST['password'] ?? '';
             $username   = trim($_POST['username'] ?? '');
-            
+            $password   = $_POST['password'] ?? '';
 
             // ---- Validation ----
             if ($first_name === '') $errors[] = "First name is required.";
             if ($last_name === '')  $errors[] = "Last name is required.";
+            if ($username === '')   $errors[] = "Username is required.";
 
             if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $errors[] = "A valid email is required.";
@@ -42,51 +40,67 @@ class RegisterController
                 $stmt = $conn->prepare($sql);
 
                 if (!$stmt) {
-                    $errors[] = "Database error (prepare failed).";
-                } else {
-                    $stmt->bind_param("s", $email);
-                    $stmt->execute();
-                    $stmt->store_result();
-
-                    if ($stmt->num_rows > 0) {
-                        $errors[] = "An account with this email already exists.";
-                    }
-
-                    $stmt->close();
+                    die("Prepare failed (email check): " . $conn->error);
                 }
+
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $stmt->store_result();
+
+                if ($stmt->num_rows > 0) {
+                    $errors[] = "Email already exists.";
+                }
+
+                $stmt->close();
+            }
+
+            // ---- Check duplicate username ----
+            if (empty($errors)) {
+                $sql = "SELECT customer_id FROM customer WHERE username = ? LIMIT 1";
+                $stmt = $conn->prepare($sql);
+
+                if (!$stmt) {
+                    die("Prepare failed (username check): " . $conn->error);
+                }
+
+                $stmt->bind_param("s", $username);
+                $stmt->execute();
+                $stmt->store_result();
+
+                if ($stmt->num_rows > 0) {
+                    $errors[] = "Username already exists.";
+                }
+
+                $stmt->close();
             }
 
             // ---- Insert customer ----
             if (empty($errors)) {
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-                // NOTE: column is assumed to be `hashed_password`
                 $sql = "INSERT INTO customer (first_name, last_name, email, password, username)
                         VALUES (?, ?, ?, ?, ?)";
 
                 $stmt = $conn->prepare($sql);
 
                 if (!$stmt) {
-                    $errors[] = "Database error (prepare failed).";
-                } else {
-                    // bind_param types: s = string. phone can be null; mysqli handles it if you pass null.
-                    $stmt->bind_param("sssss", $first_name, $last_name, $email, $hashed_password, $username);
-
-                    if ($stmt->execute()) {
-                        $stmt->close();
-
-                        // Redirect on success
-                        header("Location: /loginController");
-                        exit;
-                    } else {
-                        $errors[] = "Registration failed. Please try again.";
-                        $stmt->close();
-                    }
+                    die("Prepare failed (insert): " . $conn->error);
                 }
+
+                $stmt->bind_param("sssss", $first_name, $last_name, $email, $hashed_password, $username);
+
+                if (!$stmt->execute()) {
+                    //  SHOW REAL ERROR (this is what you were missing)
+                    die("Execute failed: " . $stmt->error);
+                }
+
+                $stmt->close();
+
+                header("Location: /login");
+                exit;
             }
         }
 
-        // Render view
         $view = BASE_PATH . '/app/Views/register.php';
         require BASE_PATH . '/app/Views/layout.php';
     }

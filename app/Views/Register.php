@@ -13,12 +13,12 @@ $title = 'Register - Fast Burgers';
             <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label for="firstName" class="block text-sm font-semibold mb-2 text-slate-700">First Name</label>
-                        <input type="text" id="firstName" name="firstName" 
+                        <input type="text" id="firstName" name="first_name" 
                          class="w-full px-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 transition-colors" placeholder="John">
                     </div>
                     <div>
                         <label for="lastName" class="block text-sm font-semibold mb-2 text-slate-700">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" 
+                        <input type="text" id="lastName" name="last_name" 
                          class="w-full px-4 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 transition-colors" placeholder="Doe">
                     </div>
                 </div>

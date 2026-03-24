@@ -36,5 +36,3 @@ $title = 'Login - Fast Burgers';
         </div>
     </div>
 </section>
-
-

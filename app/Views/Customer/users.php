@@ -1,4 +1,3 @@
-
 <?php
 // This view displays a list of users.
 ?>
