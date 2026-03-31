@@ -51,7 +51,9 @@ $title = 'Register - Fast Burgers';
                     <span class="text-slate-700">I agree to the <a href="#" class="text-indigo-600 hover:underline">Terms of Service</a></span>
                 </label>
 
-                <button type="submit" class="btn btn-primary font-semibold py-2 mt-2">Create Account</button>
+                <button type="submit" class="btn btn-primary font-semibold py-2 mt-2">Create Account
+                    <a href="/login"></a>
+                </button>
             </form>
 
             <div class="mt-6 text-center text-sm">

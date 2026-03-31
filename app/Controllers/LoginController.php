@@ -43,7 +43,7 @@ class LoginController
 
             if (empty($errors)) {
                 $sql = "SELECT customer_id, first_name, last_name, email, password  
-                        FROM customers
+                        FROM customer
                         WHERE email = ?
                         LIMIT 1";
 

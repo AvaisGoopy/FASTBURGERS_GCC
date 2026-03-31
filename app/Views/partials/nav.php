@@ -16,10 +16,10 @@
             <!-- Desktop Navigation -->
             <ul class="hidden md:flex gap-2 items-center list-none" style="margin-left: 50px;">
                 <li><a href="/" class="site-nav a active">Home</a></li>
-                <li class="relative group">
+                <!-- <li class="relative group">
                     <button type="button" class="site-nav a" data-toggle="nav" data-target="nav-orders">Orders <span class="ml-1">▾</span></button>
                     <ul id="nav-orders" class="absolute left-0 mt-0 bg-white rounded-lg shadow-lg hidden group-hover:block z-20 min-w-[160px]"><li><a href="/orders" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-t-lg">View Orders</a></li><li><a href="/admin/orders" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-b-lg">Manage Orders</a></li></ul>
-                </li>
+                </li> -->
                 <li class="relative group">
                     <button type="button" class="site-nav a" data-toggle="nav" data-target="nav-about">Menu <span class="ml-1">▾</span></button>
                     <ul id="nav-about" class="absolute left-0 mt-0 bg-white rounded-lg shadow-lg hidden group-hover:block z-20 min-w-[160px]"><li><a href="/about" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-t-lg">About Us</a></li><li><a href="/contact" class="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-b-lg">Contact</a></li></ul>
