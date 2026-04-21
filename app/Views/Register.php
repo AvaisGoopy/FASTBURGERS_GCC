@@ -8,7 +8,14 @@ $title = 'Register - Fast Burgers';
         <div class="card">
             <h1 class="text-3xl font-bold text-center mb-8" style="color: #ea580c;">Join Fast Burgers</h1>
             
-            <form action="#" method="POST" class="flex flex-col gap-4" id="registerForm">
+            <form method="POST" class="flex flex-col gap-4" id="registerForm">
+                <?php if(!empty($errors)): ?>
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                        <?php foreach($errors as $error): ?>
+                            <p>• <?php echo htmlspecialchars($error); ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
                 <p class="text-red-500" id="error" ></p>   
             <div class="grid grid-cols-2 gap-4">
                     <div>
@@ -88,8 +95,8 @@ $title = 'Register - Fast Burgers';
             error = "Please enter a valid email address.";
         } else if(password === ""){
             error = "Password is required.";
-        } else if(password.length < 6){
-            error = "Password must be at least 6 characters long.";
+        } else if(password.length < 8){
+            error = "Password must be at least 8 characters long.";
         } else if(password !== confirmPassword){
             error = "Passwords do not match.";
         }

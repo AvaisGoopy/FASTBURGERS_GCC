@@ -46,7 +46,7 @@ $title = 'Home - Fast Burgers';
             <div class="card" style="padding: 2rem; background-color: white; border: 1px solid rgba(234, 88, 12, 0.12); border-radius: 0.5rem;">
                 <div style="width: 4rem; height: 4rem; background-color: #ea580c; color: white; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.5rem; font-weight: bold;">🎁</div>
                 <h3 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.75rem; color: #111827;">Free Delivery</h3>
-                <p style="color: #6b7280; font-size: 0.875rem;">Orders over $20</p>
+                <p style="color: #6b7280; font-size: 0.875rem;">Orders over £20</p>
             </div>
         </div>
     </div>
@@ -124,4 +124,9 @@ $title = 'Home - Fast Burgers';
             Sign up today and get 15% off your first order!
         </p>
         <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
-            <button class="btn btn-primary" style="padding: 0.75rem 2rem; font-weight: 600; font-size: 1rem;">Create Account</button>
+            <button class="btn btn-primary" style="padding: 0.75rem 2rem; font-weight: 600; font-size: 1rem;" onclick="window.location.href='/register'">Create Account</button>
+            
+
+        </div>
+    </div>
+</section>

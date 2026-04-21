@@ -42,9 +42,9 @@ class LoginController
             }
 
             if (empty($errors)) {
-                $sql = "SELECT customer_id, first_name, last_name, email, password  
+                $sql = "SELECT customer_id, customer_name, customer_email, passwordHash as password  
                         FROM customer
-                        WHERE email = ?
+                        WHERE customer_email = ?
                         LIMIT 1";
 
                 $stmt = $conn->prepare($sql);

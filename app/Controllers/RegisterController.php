@@ -36,7 +36,7 @@ class RegisterController
 
             // ---- Check duplicate email ----
             if (empty($errors)) {
-                $sql = "SELECT customer_id FROM customer WHERE email = ? LIMIT 1";
+                $sql = "SELECT customer_id FROM customer WHERE customer_email = ? LIMIT 1";
                 $stmt = $conn->prepare($sql);
 
                 if (!$stmt) {
@@ -77,9 +77,10 @@ class RegisterController
             // ---- Insert customer ----
             if (empty($errors)) {
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                $full_name = $first_name . ' ' . $last_name;
 
-                $sql = "INSERT INTO customer (first_name, last_name, email, password, username)
-                        VALUES (?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO customer (customer_name, customer_email, username, passwordHash)
+                        VALUES (?, ?, ?, ?)";
 
                 $stmt = $conn->prepare($sql);
 
@@ -87,7 +88,7 @@ class RegisterController
                     die("Prepare failed (insert): " . $conn->error);
                 }
 
-                $stmt->bind_param("sssss", $first_name, $last_name, $email, $hashed_password, $username);
+                $stmt->bind_param("ssss", $full_name, $email, $username, $hashed_password);
 
                 if (!$stmt->execute()) {
                     //  SHOW REAL ERROR (this is what you were missing)

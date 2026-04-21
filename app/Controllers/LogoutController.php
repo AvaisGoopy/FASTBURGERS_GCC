@@ -9,13 +9,11 @@ class LogoutController
             session_start();
         }
 
-        // Unset all session variables
+        // Completely clear the session
+        session_unset();
         $_SESSION = [];
 
-        // Destroy session
-        session_destroy();
-
-        // Delete the session cookie (important!)
+        // Delete the session cookie BEFORE destroying the session
         if (ini_get("session.use_cookies")) {
             $params = session_get_cookie_params();
             setcookie(
@@ -28,6 +26,9 @@ class LogoutController
                 $params["httponly"]
             );
         }
+
+        // Destroy session
+        session_destroy();
 
         // Redirect to login page
         header("Location: /login");

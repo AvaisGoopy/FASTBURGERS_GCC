@@ -26,8 +26,8 @@ $title = 'About Us - Fast Burgers';
                     Today, we're proud to serve thousands of satisfied customers who appreciate quality, speed, and great taste.
                 </p>
             </div>
-            <div style="background-color: #f3f4f6; border-radius: 0.5rem; padding: 2rem; text-align: center; font-size: 4rem;">
-                🍔
+            <div style="background-color: #f3f4f6; border-radius: 0.5rem; padding: 1rem; text-align: center; display: inline-block; width: fit-content; margin: 0 auto;">
+                <img src="/assets/images/AboutBurgerImage.jpg" alt="Burger Icon" style="width: 100%; max-width: 300px;" />
             </div>
         </div>
 
@@ -65,17 +65,23 @@ $title = 'About Us - Fast Burgers';
         <h2 style="font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #111827;">Meet Our Team</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
             <div class="card" style="padding: 2rem; background-color: white; border: 1px solid rgba(234, 88, 12, 0.12); border-radius: 0.5rem; text-align: center;">
-                <div style="width: 6rem; height: 6rem; background-color: #fcd34d; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨</div>
+                <div style="width: 6rem; height: 6rem; background-color: #fcd34d; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="/assets/images/ChefMarcus.jpg" alt="Chef Marcus" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
                 <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #111827;">Chef Marcus</h3>
                 <p style="color: #6b7280; font-size: 0.875rem;">Head Chef & Founder</p>
             </div>
             <div class="card" style="padding: 2rem; background-color: white; border: 1px solid rgba(234, 88, 12, 0.12); border-radius: 0.5rem; text-align: center;">
-                <div style="width: 6rem; height: 6rem; background-color: #fcd34d; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👩</div>
+                <div style="width: 6rem; height: 6rem; background-color: #fcd34d; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="/assets/images/SarahJohnson.jpg" alt="Sarah Johnson" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
                 <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #111827;">Sarah Johnson</h3>
                 <p style="color: #6b7280; font-size: 0.875rem;">Operations Manager</p>
             </div>
             <div class="card" style="padding: 2rem; background-color: white; border: 1px solid rgba(234, 88, 12, 0.12); border-radius: 0.5rem; text-align: center;">
-                <div style="width: 6rem; height: 6rem; background-color: #fcd34d; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">👨</div>
+                <div style="width: 6rem; height: 6rem; background-color: #fcd34d; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="/assets/images/DavidLee.jpg" alt="David Lee" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
                 <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #111827;">David Lee</h3>
                 <p style="color: #6b7280; font-size: 0.875rem;">Kitchen Manager</p>
             </div>

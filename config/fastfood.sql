@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2026 at 10:44 AM
+-- Generation Time: Apr 21, 2026 at 11:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,6 +24,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `customer_id` int(11) NOT NULL,
+  `customer_name` varchar(50) NOT NULL,
+  `customer_email` varchar(50) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `username` varchar(24) DEFAULT NULL,
+  `passwordHash` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_email`, `created_at`, `username`, `passwordHash`) VALUES
+(1, 'Rhys', 'rhys@gmail.com', '0000-00-00 00:00:00', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `order`
 --
 
@@ -32,7 +54,8 @@ CREATE TABLE `order` (
   `order_timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `payment_type` varchar(4) DEFAULT NULL,
   `staff_id` int(11) DEFAULT NULL,
-  `outlet_id` int(11) DEFAULT NULL
+  `outlet_id` int(11) DEFAULT NULL,
+  `customer_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -145,12 +168,19 @@ CREATE TABLE `stock` (
 --
 
 --
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`customer_id`);
+
+--
 -- Indexes for table `order`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`order_id`),
   ADD KEY `staff_id` (`staff_id`),
-  ADD KEY `outlet_id` (`outlet_id`);
+  ADD KEY `outlet_id` (`outlet_id`),
+  ADD KEY `customer_id` (`customer_id`);
 
 --
 -- Indexes for table `order_item`
@@ -207,6 +237,22 @@ ALTER TABLE `stock`
   ADD PRIMARY KEY (`stock_id`),
   ADD KEY `product_id` (`product_id`);
 
+---- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`customer_id`),
+  ADD UNIQUE KEY `customer_email` (`customer_email`),
+  ADD UNIQUE KEY `username` (`username`);
+
+---- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- Constraints for dumped tables
 --
@@ -216,7 +262,8 @@ ALTER TABLE `stock`
 --
 ALTER TABLE `order`
   ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`),
-  ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`outlet_id`) REFERENCES `outlet` (`outlet_id`);
+  ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`outlet_id`) REFERENCES `outlet` (`outlet_id`),
+  ADD CONSTRAINT `order_ibfk_3` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
 -- Constraints for table `order_item`
