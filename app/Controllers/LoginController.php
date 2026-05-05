@@ -69,7 +69,7 @@ class LoginController
                         session_regenerate_id(true);
 
                         // Build display name
-                        $customerName = trim(($user['first_name'] ?? '') . ' ' . ($user['last_name'] ?? ''));
+                        $customerName = $user['customer_name'];
 
                         // Generate auth token for this session (server-side)
                         $authToken = bin2hex(random_bytes(32)); // 64-char token
@@ -89,7 +89,7 @@ class LoginController
                             'name' => $customerName,
                             'first_name' => $user['first_name'],
                             'last_name' => $user['last_name'],
-                            'email' => $user['email'],
+                            'email' => $user['customer_email'],
                         ];
 
                         // Redirect after login

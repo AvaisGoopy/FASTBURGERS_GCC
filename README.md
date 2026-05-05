@@ -24,3 +24,7 @@ class RegisterController
 
 do an echo "line 45" (example) to find where code stops running in RegisterController.php
 
+Admin Logins
+
+admin@fastburgers.co.uk
+tastyburger

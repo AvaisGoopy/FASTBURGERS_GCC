@@ -26,10 +26,12 @@ $title = 'Login - Fast Burgers';
                     <a href="#" class="text-indigo-600 hover:underline">Forgot password?</a>
                 </div>
 
-                <button type="submit" class="btn btn-primary font-semibold py-2 mt-2">Sign In
-                    <a href="/Customer/dashboard"></a>
-                </button>
+                <button type="submit" class="btn btn-primary font-semibold py-2 mt-2">Sign In</button>
             </form>
+
+            <div class="mt-4 text-center">
+                <a href="/admin-login" class="inline-flex items-center justify-center btn btn-secondary font-semibold py-2 w-full">Admin Login</a>
+            </div>
 
             <div class="mt-6 text-center text-sm">
                 <span class="text-slate-600">Don't have an account? </span>

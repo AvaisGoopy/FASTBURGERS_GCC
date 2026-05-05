@@ -52,14 +52,30 @@ class Router
             require BASE_PATH . '/app/Controllers/Customer/DashboardController.php';
             (new DashboardController())->index();
             break;
+        case '/delete-order':
+            require BASE_PATH . '/app/Controllers/Customer/DashboardController.php';
+            (new DashboardController())->deleteOrder();
+            break;
+        case '/change-order':
+            require BASE_PATH . '/app/Controllers/Customer/DashboardController.php';
+            (new DashboardController())->changeOrder();
+            break;
+        case '/place-order':
+            require BASE_PATH . '/app/Controllers/Customer/DashboardController.php';
+            (new DashboardController())->placeOrder();
+            break;
             // admin
         case '/admin-dashboard':
             require BASE_PATH . '/app/Controllers/Admin/AdminDashboardController.php';
             (new AdminDashboardController())->index();
             break;
-         case '/admin-login':
+        case '/admin-login':
             require BASE_PATH . '/app/Controllers/Admin/AdminLoginController.php';
             (new AdminLoginController())->index();
+            break;
+        case '/admin/orders':
+            require BASE_PATH . '/app/Controllers/Admin/AdminOrdersController.php';
+            (new AdminOrdersController())->index();
             break;
          default:
             http_response_code(404);
